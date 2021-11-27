@@ -74,7 +74,7 @@ function writePassword() {
     password = passwordChar [Math.floor(Math.random() * passwordChar.length)]
   }
 
-  function writePassword() {
+  function generatePassword() {
     var password = generatePassword();
     var pwTextArea = document.getElementById("password");
     pwTextArea.value = password;
