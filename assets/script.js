@@ -60,7 +60,25 @@ function writePassword() {
     }
   }
 
-  
+  // Special Character Prompt
+  var promptSpecial = window.prompt("Do you want your password to contain special characters? Answer YES or NO.");
+  if (promptSpecial === "yes" || promptSpecial === "YES" || promptSpecial === "Yes"){
+    var confirmYes = window.confirm("Are you sure you want to include uppercase characters?");
+
+    if (confirmYes) {
+      passwordChar += specialChar;
+    }
+  }
+
+  for (var i = 0; i < passwordLengthUser; i++) {
+    password = passwordChar [Math.floor(Math.random() * passwordChar.length)]
+  }
+
+  function writePassword() {
+    var password = generatePassword();
+    var pwTextArea = document.getElementById("#password");
+    pwTextArea.value = password;
+  }
 }
 
 // Add event listener to generate button
