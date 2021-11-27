@@ -10,7 +10,7 @@ var numericalChar = "0123456789";
 var specialChar = "!@#$%^&*()/*-<=>;:[]{}";
 
 // Write password to the #password input
-function generatePassword() {
+function writePassword() {
 
   var password = "";
   var passwordChar = "";
