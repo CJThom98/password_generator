@@ -10,7 +10,7 @@ var numericalChar = "0123456789";
 var specialChar = "!@#$%^&*()/*-<=>;:[]{}";
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
 
   var password = "";
   var passwordChar = "";
@@ -73,13 +73,17 @@ function writePassword() {
   for (var i = 0; i < passwordLengthUser; i++) {
     password = passwordChar [Math.floor(Math.random() * passwordChar.length)]
   }
+  return password;
 
-  function writePassword() {
+  
+}
+
+function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
-  }
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
