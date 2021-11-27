@@ -1,4 +1,4 @@
-# password_generator
+# Password Generator
 
 Name: Cory Thompson </br>
 Date: 11/27/2021 </br>
