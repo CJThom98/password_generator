@@ -20,3 +20,4 @@ SO THAT I can create a strong password that provides greater security </br>
 - Encountered one script that used "let" in place of "var" and "qry" in place of "prompt," is this new or old JS?
 - Originally intended to work with group to complete the project, but once I began researching, it all became much easier
 - Total time it took to complete assignment was roughly 90-120 minutes
+- Total commits: 26 pre-completed ReadMe; generally committed after a section of script was completed.
