@@ -49,7 +49,7 @@ function generatePassword() {
   // Numerical Character Prompt
   var promptNumbers = window.prompt("Do you want your password to contain numbers? Answer YES or NO.");
   if (promptNumbers === "yes" || promptNumbers === "YES" || promptNumbers === "Yes"){
-    var confirmYes = window.confirm("Are you sure you want to include uppercase characters?");
+    var confirmYes = window.confirm("Are you sure you want to include numbers?");
 
     if (confirmYes) {
       passwordChar += numericalChar;
@@ -59,7 +59,7 @@ function generatePassword() {
   // Special Character Prompt
   var promptSpecial = window.prompt("Do you want your password to contain special characters? Answer YES or NO.");
   if (promptSpecial === "yes" || promptSpecial === "YES" || promptSpecial === "Yes"){
-    var confirmYes = window.confirm("Are you sure you want to include uppercase characters?");
+    var confirmYes = window.confirm("Are you sure you want to include special characters?");
 
     if (confirmYes) {
       passwordChar += specialChar;
@@ -72,7 +72,7 @@ function generatePassword() {
   }
 
   for (var i = 0; i < passwordLengthUser; i++) {
-    password = passwordChar [Math.floor(Math.random() * passwordChar.length)];
+    password +=passwordChar[Math.floor(Math.random() * passwordChar.length)];
   }
   return password;
 }
