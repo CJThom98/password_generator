@@ -17,14 +17,12 @@ function generatePassword() {
   // Length of password prompt
   var passwordLengthUser = prompt("What is the length of your desired password? Must be between 8 and 128 characters.");
 
-  if (passwordLengthUser < 8) {
-    alert("Password must be more than 7 characters!");
-    return "";
+  if (passwordLengthUser >= 8 && passwordLengthUser <= 128) {
+    console.log(passwordLengthUser)
   }
 
-  if (passwordLengthUser > 128) {
-    alert("Password must not be more than 128 characters!");
-    return "";
+  else {
+    alert ("Password must contain at least 8 characters, at most 128 characters!")
   }
 
   // Lowercase Character Prompt
@@ -66,20 +64,23 @@ function generatePassword() {
     if (confirmYes) {
       passwordChar += specialChar;
     }
+
+    // If nothing is entered
+    if (!promptLowercase && !promptUppercase && !promptNumbers && !promptSpecial) {
+      return alert("At least one criteria must be entered!");
+    }
   }
 
   for (var i = 0; i < passwordLengthUser; i++) {
     password = passwordChar [Math.floor(Math.random() * passwordChar.length)];
   }
   return password;
-
-  
 }
 
 function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-    passwordText.value = password;
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 }
 
 
