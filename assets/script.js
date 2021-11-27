@@ -11,10 +11,24 @@ var specialChar = "!@#$%^&*()/*-<=>;:[]{}";
 
 // Write password to the #password input
 function generatePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  var password = "";
+  var passwordChar = "";
+
+  var passwordLengthUser = prompt("What is the length of your desired password? Must be between 8 and 128 characters.")
+  passwordLengthUser = parseInt(passwordLengthUser);
+
+  if (passwordLengthUser < 8) {
+    alert("Password must be more than 7 characters!");
+    return "";
+  }
+
+  if (passwordLengthUser > 128) {
+    alert("Password must not be more than 128 characters!");
+    return "";
+  }
+
+  var lowercaseCharactersChoice
 
 }
 
