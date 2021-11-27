@@ -76,7 +76,7 @@ function writePassword() {
 
   function writePassword() {
     var password = generatePassword();
-    var pwTextArea = document.getElementById("#password");
+    var pwTextArea = document.getElementById("password");
     pwTextArea.value = password;
   }
 }
