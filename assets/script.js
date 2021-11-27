@@ -15,6 +15,7 @@ function generatePassword() {
   var password = "";
   var passwordChar = "";
 
+  // Length of password prompt
   var passwordLengthUser = prompt("What is the length of your desired password? Must be between 8 and 128 characters.")
   passwordLengthUser = parseInt(passwordLengthUser);
 
@@ -28,8 +29,16 @@ function generatePassword() {
     return "";
   }
 
-  var lowercaseCharactersChoice
+  // Lowercase Character Prompt
+  var promptLowercase = window.prompt("Would you like your password to contain lowercase characters? Answer YES or NO.")
 
+  if (promptLowercase === "yes" || promptLowercase === "YES" || promptLowercase === "Yes"){
+    var confirmYes = window.confirm("Are you sure you want to include lowercase characters?");
+
+    if (confirmYes) {
+      passwordChar += lowercaseChar;
+    }
+  }
 }
 
 // Add event listener to generate button
