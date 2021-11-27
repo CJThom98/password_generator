@@ -16,7 +16,7 @@ function writePassword() {
   var passwordChar = "";
 
   // Length of password prompt
-  var passwordLengthUser = prompt("What is the length of your desired password? Must be between 8 and 128 characters.")
+  var passwordLengthUser = prompt("What is the length of your desired password? Must be between 8 and 128 characters.");
   passwordLengthUser = parseInt(passwordLengthUser);
 
   if (passwordLengthUser < 8) {
@@ -30,7 +30,7 @@ function writePassword() {
   }
 
   // Lowercase Character Prompt
-  var promptLowercase = window.prompt("Would you like your password to contain lowercase characters? Answer YES or NO.")
+  var promptLowercase = window.prompt("Would you like your password to contain lowercase characters? Answer YES or NO.");
 
   if (promptLowercase === "yes" || promptLowercase === "YES" || promptLowercase === "Yes"){
     var confirmYes = window.confirm("Are you sure you want to include lowercase characters?");
@@ -39,6 +39,28 @@ function writePassword() {
       passwordChar += lowercaseChar;
     }
   }
+
+  // Uppercase Character Prompt
+  var promptUppercase = window.prompt("Would you like your password to contain uppercase characters? Answer YES or NO.");
+  if (promptUppercase === "yes" || promptUppercase === "YES" || promptUppercase === "Yes"){
+    var confirmYes = window.confirm("Are you sure you want to include uppercase characters?");
+
+    if (confirmYes) {
+      passwordChar += uppercaseChar;
+    }
+  }
+
+  // Numerical Character Prompt
+  var promptNumbers = window.prompt("Do you want your password to contain numbers? Answer YES or NO.");
+  if (promptNumbers === "yes" || promptNumbers === "YES" || promptNumbers === "Yes"){
+    var confirmYes = window.confirm("Are you sure you want to include uppercase characters?");
+
+    if (confirmYes) {
+      passwordChar += numericalChar;
+    }
+  }
+
+  
 }
 
 // Add event listener to generate button
