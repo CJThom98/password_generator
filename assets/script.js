@@ -27,6 +27,9 @@ function generatePassword() {
     console.log(passwordLength);
   }
 
+  // Create confirmation if user answers no on each prompt
+  // Clarify for prompt options to adjust for techological illeteracy
+
   // Upper case prompt
   var confirmUpperCase = window.confirm("Would you like your password to contain uppercase characters?");
   if (confirmUpperCase) {
